@@ -1,0 +1,12 @@
+version: '3'
+services:
+  api:
+    build: ./server/
+    environment:
+      - MESSAGE=HELLO FROM DOCKER
+    ports:
+      - "3000:3000"
+  frtonend:
+    build: ./client/
+    ports:
+      - "3333:80"
